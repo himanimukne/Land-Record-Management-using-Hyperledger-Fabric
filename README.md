@@ -21,5 +21,13 @@ In Hyperledger Composer, business network definition is provided using the follo
 
 These files are zipped together to form a Business Network Archive (.bna), and a .card definition that gets deployed on the running Fabric network. Consequently, connection profiles and user credentials are used to install and access the .bna file to a distributed ledger.
 
-Procedure:
-`./startFabric.sh`
+Procedure (run the commands on terminal):
+
+1. Navigate to where Fabric is installed, inside /fabric-dev-servers, run `./startFabric.sh`.
+2. Move to the folder where the business definition files (model, script, access control and query files) are saved, run `yo hyperledger-composer` to start Hyperledger Composer, the abstraction of Fabric.
+3. Next, combine all of these to form a deployable Business Network Archive (.bna) file, run `composer archive create -t dir -n`. Check to see in the folder if the .bna file is formed.
+4. Deploy this .bna file on the network, using your Fabric card (which is PeerAdmin@hlfv1 for me). This generates a network card. run `composer network install --card PeerAdmin@hlfv1 --archiveFile digitalProperty-network.bna`. Check in the folder to see if the .card file is created. Note: my .bna is uploaded here but it is advisable to generate your own using your Fabric card, as it varies with Fabric version.
+5. Start the network by specifying the network card, network name, version, admin username and password, run `composer network start -c PeerAdmin@hlfv1 -n DigitalPropertyNetwork -V 0.0.1 -A admin -S adminpw`.
+6. Import the card to the network `composer card import -f admin@DigitalPropertyNetwork.card`
+7. Ping to check if it is working `composer network ping --card admin@DigitalPropertyNetwork`
+
