@@ -1,5 +1,13 @@
 # Land-Record-Management-using-Hyperledger-Fabric
-Manage land records securely, over a decentralized, peer-to-peer network using Blockchain technology. Store valuable documents over the decentralized system of IPFS (Interplanetary File System)
+Manage land records securely, over a decentralized, peer-to-peer network using Blockchain technology. Store valuable documents over the decentralized system of IPFS (Interplanetary File System).
+This provides a lucid understanding of Hyperledger Fabric using Hyperledger Composer, to understand the concepts of network definitions in Hyperledger Fabric.
+
+Prerequisites:
+1. Docker-ce version 17.03.1-ce or greater, Docker Compose version 1.9.0 or greater., Docker-swarm (for multihost blockchain network), latest released Docker images for Hyperledger Fabric
+2. npm version 8.11.2 or greater, node.js for Javascript coding, to connect to a deployed business network, to create, read, update and delete assets and participants and to submit transactions.
+3. GoLang (to write chaincode, or smart contracts in the case of Hyperledger Fabric)
+4. REST Server for CLI
+5. Hyperledger Fabric
 
 In Hyperledger Composer, business network definition is provided using the following primary components:
 
