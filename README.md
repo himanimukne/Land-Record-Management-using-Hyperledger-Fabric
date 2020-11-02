@@ -20,3 +20,6 @@ In Hyperledger Composer, business network definition is provided using the follo
 • Query file (.qry) : Queries are written in bespoke Query language. 
 
 These files are zipped together to form a Business Network Archive (.bna), and a .card definition that gets deployed on the running Fabric network. Consequently, connection profiles and user credentials are used to install and access the .bna file to a distributed ledger.
+
+Procedure:
+`./startFabric.sh`
